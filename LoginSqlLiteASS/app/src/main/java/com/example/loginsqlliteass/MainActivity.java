@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
                 final String selection = daftar[arg2];
-                final CharSequence[] dialogitem = {"Lihat Data Mahasiswa","Update Data Mahasiswa","Hapus Data Mahasiswa"};
+                final CharSequence[] dialogitem = {"Update Data Mahasiswa","Hapus Data Mahasiswa"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Pilihan");
                 builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
@@ -68,16 +68,11 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int item) {
                         switch (item) {
                             case 0:
-                                Intent i = new Intent(getApplicationContext(), DetailActivity.class);
-                                i.putExtra("nama",selection);
-                                startActivity(i);
-                                break;
-                            case 1:
                                 Intent in = new Intent(getApplicationContext(),UpdateActivity.class);
                                 in.putExtra("nama",selection);
                                 startActivity(in);
                                 break;
-                            case 2:
+                            case 1:
                                 SQLiteDatabase db = database.getWritableDatabase();
                                 db.execSQL("delete from mahasiswa where nama = '" + selection +"'");
                                 RefreshList();
