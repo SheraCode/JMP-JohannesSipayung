@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abu"
+    tools:context=".Informasi">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/kuning"
+        app:title="Informasi" />
+
+    <ImageView
+        android:id="@+id/logo_ui"
+        android:layout_width="187dp"
+        android:layout_height="305dp"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/universitas_indonesia" />
+
+    <TextView
+        android:id="@+id/deskripsi_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_ui"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Aplikasi ini adalah aplikasi pencatatan data mahasiswa Universitas Indonesia. Dengan aplikasi ini, Anda dapat dengan mudah mengelola data mahasiswa berdasarkan lokasi kampus UI yang tidak hanya satu. Aplikasi ini dirancang untuk mempermudah proses pencatatan dan manajemen data mahasiswa secara efisien."
+        android:textColor="@android:color/white"
+        android:textSize="19sp" />
+
+</RelativeLayout>
